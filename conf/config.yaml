@@ -8,3 +8,5 @@ defaults:
   - activation@mlp_activation : relu    # activation par défaut du MLP
   - init@cnn_init             : xavier  # initialisation par défaut du CNN
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
+  - optimizer: adam
+  - loss: cross_entropy
