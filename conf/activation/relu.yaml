@@ -1,0 +1,9 @@
+# -------------------------------
+# conf/activation/relu.yaml
+# -------------------------------
+name: relu
+
+activation:
+  _target_: torch.nn.ReLU
+  inplace: true
+
