@@ -3,6 +3,29 @@ import torchvision
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
+from omegaconf import DictConfig
+
+
+def get_dataloaders(cfg: DictConfig):
+    transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    ])
+
+    trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
+                                            download=True, transform=transform)
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=cfg.batch_size,
+                                              shuffle=True, num_workers=2)
+
+    testset = torchvision.datasets.CIFAR10(root='./data', train=False,
+                                           download=True, transform=transform)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=cfg.batch_size,
+                                             shuffle=False, num_workers=2)
+
+    return trainloader, testloader
+ 
+"""""
+#TEST DU DEBUT 
 
 transform = transforms.Compose([
     transforms.ToTensor(),
@@ -36,5 +59,4 @@ if __name__ == '__main__':
 
     imshow(torchvision.utils.make_grid(images))
     print(' '.join(f'{classes[labels[j]]:5s}' for j in range(batch_size)))
-    
-    modif = "test"
+"""

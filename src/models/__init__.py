@@ -1,1 +1,1 @@
-from src.models import Net
+from .net import Net

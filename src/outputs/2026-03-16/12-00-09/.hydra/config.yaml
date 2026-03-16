@@ -1,0 +1,17 @@
+model:
+  mlp: {}
+  cnn: {}
+cnn_activation:
+  name: relu
+  activation:
+    _target_: torch.nn.ReLU
+    inplace: true
+mlp_activation:
+  name: relu
+  activation:
+    _target_: torch.nn.ReLU
+    inplace: true
+cnn_init: {}
+mlp_init: {}
+optimizer: {}
+loss: {}
