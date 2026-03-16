@@ -3,7 +3,7 @@
 # -------------------------------
 defaults:
   - model/mlp: classifier
-  - model/conv: simple
+  - model/cnn: simple
   - activation@cnn_activation : relu    # activation par défaut du CNN
   - activation@mlp_activation : relu    # activation par défaut du MLP
   - init@cnn_init             : xavier  # initialisation par défaut du CNN
