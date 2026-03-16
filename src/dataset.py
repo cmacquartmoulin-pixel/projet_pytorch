@@ -36,3 +36,5 @@ if __name__ == '__main__':
 
     imshow(torchvision.utils.make_grid(images))
     print(' '.join(f'{classes[labels[j]]:5s}' for j in range(batch_size)))
+    
+    modif = "test"
