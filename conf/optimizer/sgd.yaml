@@ -1,0 +1,8 @@
+# -------------------------------
+# conf/model/optimizer/sgd.yaml
+# -------------------------------
+
+_name_: sgd
+lr: 0.001     # initial learning rate
+momentum: 0.9
+weight_decay: 0.0  # Weight decay 
