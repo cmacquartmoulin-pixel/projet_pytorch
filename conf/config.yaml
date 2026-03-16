@@ -10,3 +10,7 @@ defaults:
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
   - optimizer: adam
   - loss: cross_entropy
+
+seed: 42
+epochs: 10
+bach_size: 8
