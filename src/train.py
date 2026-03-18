@@ -8,8 +8,41 @@ from torchinfo import summary
 from models import Net
 from dataset import get_dataloaders
 
+class EarlyStopping:
+    def __init__(self, cfg):
+        self.enabled   = cfg.early_stopping.enabled
+        self.patience  = cfg.early_stopping.patience
+        self.min_delta = cfg.early_stopping.min_delta
+        self.counter   = 0
+        self.best_loss = float('inf')
+        self.stop      = False
+
+    def step(self, val_loss):
+        if not self.enabled:
+            return
+        if val_loss < self.best_loss - self.min_delta:
+            self.best_loss = val_loss  # better → resets
+            self.counter   = 0
+        else:
+            self.counter += 1          # not better → increases
+            if self.counter >= self.patience:
+                self.stop = True
+
+
 # fonction avec boucle sur toutes les époques
 def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, cfg):
+    early_stopping = EarlyStopping(cfg)  # inicializa
+
+    for epoch in range(cfg.epochs):
+        train_loss = _train_epoch(model, optimizer, loss, train_loader, device)
+        val_loss   = _val_epoch(model, loss, val_loader, device)
+        print(f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
+
+        early_stopping.step(val_loss)    # verifica se deve parar
+        if early_stopping.stop:
+            print(f"Early stopping na época {epoch+1}")
+            break
+"""def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, cfg):
     for epoch in range(cfg.epochs):
         train_loss = _train_epoch(model, optimizer, loss, train_loader, device)
         val_loss   = _val_epoch(model, loss, val_loader, device)
@@ -17,7 +50,7 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
         print(f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
     torch.save(model.state_dict(), "model.pth")
-    print("Modele sauvegardé dans model.pth")
+    print("Modele sauvegardé dans model.pth")"""
 
 # fonction d'apprentissage : poids modifiés
 def _train_epoch(model, optimizer, loss, train_loader, device):
