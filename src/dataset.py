@@ -3,6 +3,7 @@ import torchvision
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
+from torch.utils.data import Subset
 from omegaconf import DictConfig
 
 
@@ -14,11 +15,15 @@ def get_dataloaders(cfg: DictConfig):
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
                                             download=True, transform=transform)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=cfg.batch_size,
-                                              shuffle=True, num_workers=2)
-
     testset = torchvision.datasets.CIFAR10(root='./data', train=False,
                                            download=True, transform=transform)
+    
+    if cfg.debug:
+        trainset = Subset(trainset, range(cfg.debug_size))
+        testset  = Subset(testset,  range(cfg.debug_size // 5))
+
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=cfg.batch_size,
+                                              shuffle=True, num_workers=2)
     testloader = torch.utils.data.DataLoader(testset, batch_size=cfg.batch_size,
                                              shuffle=False, num_workers=2)
 

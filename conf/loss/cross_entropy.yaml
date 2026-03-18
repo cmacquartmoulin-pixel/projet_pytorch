@@ -1,8 +1,5 @@
 # -------------------------------
 # conf/model/loss/cross_entropy.yaml
 # -------------------------------
-
-_name_: cross_entropy
-loss:
-  _target_: torch.nn.CrossEntropyLoss
+_target_: torch.nn.CrossEntropyLoss
   
