@@ -14,9 +14,8 @@ defaults:
   # - scheduler: step  
 
 seed: 42
-epochs: 10
-batch_size: 32
-
+epochs: 8
+batch_size : 8
 #
 debug: true        # ← flag debug
-debug_size: 1000   # ← taille du sous-ensemble
+debug_size: 500  # ← taille du sous-ensemble

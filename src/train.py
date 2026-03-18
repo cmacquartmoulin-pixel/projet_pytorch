@@ -1,8 +1,8 @@
+from hydra.utils import instantiate
 import hydra
 from omegaconf import DictConfig
 import torch
 import torch.nn as nn
-from hydra.utils import instantiate
 from torchinfo import summary
 
 from models import Net
