@@ -2,7 +2,7 @@
 # conf/config.yaml
 # -------------------------------
 defaults:
-  - model/mlp: classifier
+  - model/mlp:git
   - model/cnn: simple
   - activation@cnn_activation : relu    # activation par défaut du CNN
   - activation@mlp_activation : relu    # activation par défaut du MLP
@@ -10,12 +10,13 @@ defaults:
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
   - optimizer: adam
   - loss: cross_entropy
-  - _self_  
-  # - scheduler: step  
+  - augmentation: random_crop
 
 seed: 42
-epochs: 8
-batch_size : 8
-#
-debug: true        # ← flag debug
-debug_size: 500  # ← taille du sous-ensemble
+epochs: 10
+batch_size: 8
+
+early_stopping:
+  enabled: true
+  patience: 5
+  min_delta: 0.001
