@@ -42,6 +42,9 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
         if early_stopping.stop:
             print(f"Early stopping na época {epoch+1}")
             break
+    torch.save(model.state_dict(), "model.pth")
+    print("Modele sauvegardé dans model.pth")
+    
 """def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, cfg):
     for epoch in range(cfg.epochs):
         train_loss = _train_epoch(model, optimizer, loss, train_loader, device)
