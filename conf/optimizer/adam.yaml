@@ -3,6 +3,7 @@
 # -------------------------------
 
 _name_: adam
+_target_: torch.optim.Adam 
 lr: 0.001   # initial learning rate
 betas: [0.9, 0.999] # Coefficients used for computing running averages of gradient and its square
 

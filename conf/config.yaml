@@ -11,6 +11,7 @@ defaults:
   - optimizer: adam
   - loss: cross_entropy
   - _self_  
+  # - scheduler: step  
 
 seed: 42
 epochs: 10
