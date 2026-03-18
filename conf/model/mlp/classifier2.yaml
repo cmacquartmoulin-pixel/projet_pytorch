@@ -1,0 +1,7 @@
+# -------------------------------
+# conf/model/mlp/classifier2.yaml
+# -------------------------------
+name : classifier
+  
+mlp:
+  layers: [1024,128, 96, 64, 10]

@@ -1,0 +1,8 @@
+# -------------------------------
+# conf/activation/gelu.yaml
+# -------------------------------
+name: gelu
+
+activation:
+  _target_: torch.nn.GELU
+

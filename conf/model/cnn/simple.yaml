@@ -1,0 +1,15 @@
+# -------------------------------
+# conf/model/conv/simple.yaml
+# -------------------------------
+
+name : simple 
+
+conv:
+  in_channels: 3  #RGB images
+  out_channels:   #2 conv layers (3->32->64)
+    - 32
+    - 64
+  kernel_size: 3
+  stride: 1
+  padding: 1
+  pool: 2
