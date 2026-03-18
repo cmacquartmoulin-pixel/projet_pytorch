@@ -3,11 +3,10 @@
 # -------------------------------
 name : classifier
   
-mlp:
-  mlp_dims: [4096, 512, 128, 10] 
+mlp_dims: [4096, 512, 128, 10] 
   #4096 = 64*8*8 flattened pixels -  input size (output of the CNN)
   #512 = first hidden layer
   #128 = second hidden layer
   #10 = output layer (10 classes)
 
-  dropout: 0.2
+dropout: 0.2

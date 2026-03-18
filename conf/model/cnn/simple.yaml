@@ -1,5 +1,5 @@
 # -------------------------------
-# conf/model/conv/simple.yaml
+# conf/model/cnn/simple.yaml
 # -------------------------------
 
 name : simple 

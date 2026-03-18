@@ -1,7 +1,7 @@
 # -------------------------------
-# conf/model/conv/simple2.yaml
+# conf/model/cnn/simple2.yaml
 # -------------------------------
-name : classifier
+name : simple2 #appelé classifier avant
 
 conv:
   in_channels: 3

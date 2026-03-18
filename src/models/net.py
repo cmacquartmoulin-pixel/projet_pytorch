@@ -10,7 +10,7 @@ class Net(nn.Module):
         super().__init__()
         self.cnn    = CNN(cfg)
         self.flatten = nn.Flatten()
-        self.mlp    = MLP(cfg)
+        self.mlp = MLP(cfg)
 
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
