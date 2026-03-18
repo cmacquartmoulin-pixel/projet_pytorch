@@ -16,6 +16,9 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
         # scheduler.step()
         print(f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
+    torch.save(model.state_dict(), "model.pth")
+    print("Modele sauvegardé dans model.pth")
+
 # fonction d'apprentissage : poids modifiés
 def _train_epoch(model, optimizer, loss, train_loader, device):
     model.train()
