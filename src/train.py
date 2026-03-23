@@ -40,7 +40,7 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
 
         early_stopping.step(val_loss)    # verifica se deve parar
         if early_stopping.stop:
-            print(f"Early stopping na época {epoch+1}")
+            print(f"Early stopping for epoch {epoch+1}")
             break
     torch.save(model.state_dict(), "model.pth")
     print("Modele sauvegardé dans model.pth")
@@ -53,7 +53,7 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
         print(f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
     torch.save(model.state_dict(), "model.pth")
-    print("Modele sauvegardé dans model.pth")"""
+    print("Modele sauvegardé dans model.pth")""" 
 
 # fonction d'apprentissage : poids modifiés
 def _train_epoch(model, optimizer, loss, train_loader, device):
