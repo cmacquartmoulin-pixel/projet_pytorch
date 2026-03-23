@@ -8,15 +8,33 @@ from omegaconf import DictConfig
 
 
 def get_dataloaders(cfg: DictConfig):
-    transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    
+    # Train : avec augmentation
+    train_transform_list = []
+
+    if cfg.augmentation.random_crop.enabled:
+        train_transform_list.append(transforms.RandomCrop(
+            size=cfg.augmentation.random_crop.size,
+            padding=cfg.augmentation.random_crop.padding
+        ))
+
+    if cfg.augmentation.horizontal_flip.enabled:
+        train_transform_list.append(transforms.RandomHorizontalFlip())
+
+    train_transform_list.append(transforms.ToTensor())
+    train_transform_list.append(transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)))
+    train_transform = transforms.Compose(train_transform_list)
+
+    # Val : sans augmentation
+    val_transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
-                                            download=True, transform=transform)
-    testset = torchvision.datasets.CIFAR10(root='./data', train=False,
-                                           download=True, transform=transform)
+                                            download=True, transform=train_transform)
+    testset  = torchvision.datasets.CIFAR10(root='./data', train=False,
+                                            download=True, transform=val_transform)
     
     if cfg.debug:
         trainset = Subset(trainset, range(cfg.debug_size))

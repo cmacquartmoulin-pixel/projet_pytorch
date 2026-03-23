@@ -9,4 +9,4 @@ mlp_dims: [4096, 512, 128, 10]
   #128 = second hidden layer
   #10 = output layer (10 classes)
 
-dropout: 0.2
+dropout: 0.5
