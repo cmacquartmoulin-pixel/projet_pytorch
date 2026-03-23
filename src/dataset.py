@@ -23,9 +23,9 @@ def get_dataloaders(cfg: DictConfig):
         testset  = Subset(testset,  range(cfg.debug_size // 5))
 
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=cfg.batch_size,
-                                              shuffle=True, num_workers=2)
+                                              shuffle=True, num_workers=0)
     testloader = torch.utils.data.DataLoader(testset, batch_size=cfg.batch_size,
-                                             shuffle=False, num_workers=2)
+                                             shuffle=False, num_workers=0)
 
     return trainloader, testloader
  
