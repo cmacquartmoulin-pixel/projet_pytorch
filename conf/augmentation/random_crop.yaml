@@ -1,0 +1,7 @@
+# -------------------------------
+# conf/model/augmentation/random_crop.yaml
+# -------------------------------
+name: random_crop
+enabled: true
+size: 32
+padding: 4
