@@ -129,7 +129,7 @@ def main(cfg: DictConfig):
 
     # Model
     model = Net(cfg).to(device) # Crée un réseau CNN+MLP et l'envoie sur le bon device
-    summary(model, input_size=(1, 3, 32, 32))  # Show informations about the network
+    # summary(model, input_size=(1, 3, 32, 32))  # Show informations about the network
     wandb.watch(model, log="gradients", log_freq=10)
 
     # Hydra lit les fichiers `.yaml` et crée automatiquement la **loss**, l'**optimiseur** et le **scheduler**.
