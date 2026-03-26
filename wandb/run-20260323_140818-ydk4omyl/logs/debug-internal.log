@@ -1,0 +1,18 @@
+{"time":"2026-03-23T14:08:19.394468+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-03-23T14:08:19.415609+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-03-23T14:08:19.449092+01:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-23T14:08:19.756057+01:00","level":"INFO","msg":"stream: created new stream","id":"ydk4omyl"}
+{"time":"2026-03-23T14:08:19.756342+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-03-23T14:08:19.757066+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-03-23T14:08:19.757902+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-03-23T14:08:19.757907+01:00","level":"INFO","msg":"writer: started","stream_id":"ydk4omyl"}
+{"time":"2026-03-23T14:08:20.601068+01:00","level":"INFO","msg":"filestream: sending request","total_files":1}
+{"time":"2026-03-23T14:08:20.955639+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T14:08:21.880235+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-23T14:08:21.880604+01:00","level":"INFO","msg":"filestream: sending request","total_files":2,"history_offset":0,"history_lines":8,"uploaded_len":4,"complete":true,"exit_code":0}
+{"time":"2026-03-23T14:08:22.330351+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T14:08:22.333059+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-23T14:08:22.346465+01:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-03-23T14:08:22.346503+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-03-23T14:08:22.34665+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-03-23T14:08:22.346684+01:00","level":"INFO","msg":"stream: closed"}

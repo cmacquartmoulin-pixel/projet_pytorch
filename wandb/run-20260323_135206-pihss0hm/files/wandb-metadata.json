@@ -1,0 +1,28 @@
+{
+  "os":  "macOS-14.8.4-x86_64-i386-64bit",
+  "python":  "CPython 3.12.7",
+  "startedAt":  "2026-03-23T12:52:06.705316Z",
+  "program":  "/Users/tete/TPS/projet_pytorch/src/testwandb.py",
+  "codePath":  "src/testwandb.py",
+  "codePathLocal":  "src/testwandb.py",
+  "git":  {
+    "remote":  "https://github.com/cmacquartmoulin-pixel/projet_pytorch.git",
+    "commit":  "7661fbf3168b24a7212c1fb711edeec5939950a1"
+  },
+  "email":  "tetefalcao.18@gmail.com",
+  "root":  "/Users/tete/TPS/projet_pytorch",
+  "host":  "MacBook-Air-de-Ana-7.local",
+  "executable":  "/Users/tete/TPS/projet_pytorch/venv/bin/python",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "121018208256",
+      "used":  "112557342720"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "writerId":  "n3keo9l49b2jvvbw3zcjd92dls7s4r7c"
+}

@@ -139,8 +139,8 @@ def main(cfg: DictConfig):
 
     # Training
     train(model=model, optimizer=optimizer, loss=loss,
-      scheduler=None, train_loader=train_loader,
-      val_loader=val_loader, device=device, cfg=cfg)
+        scheduler=None, train_loader=train_loader,
+        val_loader=val_loader, device=device, cfg=cfg)
     
     wandb.finish()
 

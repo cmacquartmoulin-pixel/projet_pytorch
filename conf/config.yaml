@@ -10,7 +10,9 @@ defaults:
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
   - optimizer: adam
   - loss: cross_entropy
-  - augmentation: default 
+  - augmentation: 
+    - horizontal_flip
+    - random_crop
   - _self_
 
 seed: 42

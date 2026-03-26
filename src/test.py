@@ -5,7 +5,7 @@ import hydra
 from omegaconf import DictConfig
 
 CLASSES = ['airplane', 'automobile', 'bird', 'cat', 'deer',
-           'dog', 'frog', 'horse', 'ship', 'truck']
+            'dog', 'frog', 'horse', 'ship', 'truck']
 
 @hydra.main(version_base=None, config_path="../conf", config_name="config")
 def main(cfg: DictConfig):

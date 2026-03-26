@@ -1,0 +1,125 @@
+Files already downloaded and verified
+Files already downloaded and verified
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+Net                                      [1, 10]                   --
+├─CNN: 1-1                               [1, 64, 8, 8]             --
+│    └─Sequential: 2-1                   [1, 64, 8, 8]             --
+│    │    └─Conv2d: 3-1                  [1, 32, 32, 32]           896
+│    │    └─ReLU: 3-2                    [1, 32, 32, 32]           --
+│    │    └─MaxPool2d: 3-3               [1, 32, 16, 16]           --
+│    │    └─Conv2d: 3-4                  [1, 64, 16, 16]           18,496
+│    │    └─ReLU: 3-5                    [1, 64, 16, 16]           --
+│    │    └─MaxPool2d: 3-6               [1, 64, 8, 8]             --
+├─Flatten: 1-2                           [1, 4096]                 --
+├─MLP: 1-3                               [1, 10]                   --
+│    └─Sequential: 2-2                   [1, 10]                   --
+│    │    └─Linear: 3-7                  [1, 512]                  2,097,664
+│    │    └─ReLU: 3-8                    [1, 512]                  --
+│    │    └─Dropout: 3-9                 [1, 512]                  --
+│    │    └─Linear: 3-10                 [1, 128]                  65,664
+│    │    └─ReLU: 3-11                   [1, 128]                  --
+│    │    └─Dropout: 3-12                [1, 128]                  --
+│    │    └─Linear: 3-13                 [1, 10]                   1,290
+==========================================================================================
+Total params: 2,184,010
+Trainable params: 2,184,010
+Non-trainable params: 0
+Total mult-adds (Units.MEGABYTES): 7.82
+==========================================================================================
+Input size (MB): 0.01
+Forward/backward pass size (MB): 0.40
+Params size (MB): 8.74
+Estimated Total Size (MB): 9.15
+==========================================================================================
+Epoch 0 | Train Loss: 1.3633 | Val Loss: 1.0447
+Epoch 1 | Train Loss: 1.0214 | Val Loss: 0.9439
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x10835cfe0>
+Traceback (most recent call last):
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1479, in __del__
+    self._shutdown_workers()
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1443, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/popen_fork.py", line 40, in wait
+    if not wait([self.sentinel], timeout):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/connection.py", line 1136, in wait
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 149, in <module>
+    main()
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+          ^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 141, in main
+    train(model=model, optimizer=optimizer, loss=loss,
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 39, in train
+    train_loss, train_acc = _train_epoch(model, optimizer, loss, train_loader, device)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 75, in _train_epoch
+    outputs = model(x)
+              ^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/src/models/net.py", line 30, in forward
+    x = self.cnn(x)
+        ^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/src/models/cnn.py", line 26, in forward
+    return self.cnn(x)
+           ^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,31 @@
+{"time":"2026-03-23T16:04:32.02967+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-03-23T16:04:32.033718+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-03-23T16:04:32.050647+01:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-23T16:04:32.357957+01:00","level":"INFO","msg":"stream: created new stream","id":"js3v0t8b"}
+{"time":"2026-03-23T16:04:32.358159+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-03-23T16:04:32.358684+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-03-23T16:04:32.358762+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-03-23T16:04:32.358767+01:00","level":"INFO","msg":"writer: started","stream_id":"js3v0t8b"}
+{"time":"2026-03-23T16:04:33.473151+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-03-23T16:04:33.796342+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:04:48.474345+01:00","level":"INFO","msg":"filestream: sending request","total_files":2,"events_offset":0,"events_lines":1,"console_offset":1,"console_lines":34,"uploaded_len":2}
+{"time":"2026-03-23T16:04:48.733728+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:05:03.475145+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":1,"events_lines":1}
+{"time":"2026-03-23T16:05:04.031113+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:05:18.475574+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":2,"events_lines":1}
+{"time":"2026-03-23T16:05:18.761089+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:05:33.476284+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":3,"events_lines":1}
+{"time":"2026-03-23T16:05:33.849556+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:05:48.476508+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":4,"events_lines":1}
+{"time":"2026-03-23T16:05:48.791705+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:06:03.476061+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":5,"events_lines":1}
+{"time":"2026-03-23T16:06:03.770501+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:06:18.476411+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":6,"events_lines":1}
+{"time":"2026-03-23T16:06:18.749621+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:06:21.291657+01:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-03-23T16:06:22.195654+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-23T16:06:22.197646+01:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":1,"console_offset":35,"console_lines":61,"uploaded_len":3,"complete":true,"exit_code":255}
+{"time":"2026-03-23T16:06:22.689878+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-23T16:06:22.690924+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-03-23T16:06:22.692863+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-03-23T16:06:22.693127+01:00","level":"INFO","msg":"stream: closed"}

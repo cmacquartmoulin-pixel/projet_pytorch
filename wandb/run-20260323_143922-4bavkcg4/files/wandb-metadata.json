@@ -1,0 +1,28 @@
+{
+  "os":  "macOS-14.8.4-x86_64-i386-64bit",
+  "python":  "CPython 3.12.7",
+  "startedAt":  "2026-03-23T13:39:22.681591Z",
+  "program":  "/Users/tete/TPS/projet_pytorch/src/train.py",
+  "codePath":  "src/train.py",
+  "codePathLocal":  "src/train.py",
+  "git":  {
+    "remote":  "https://github.com/cmacquartmoulin-pixel/projet_pytorch.git",
+    "commit":  "2ae5d2aafef409508f040d9cf9631e9cf978913a"
+  },
+  "email":  "tetefalcao.18@gmail.com",
+  "root":  "/Users/tete/TPS/projet_pytorch",
+  "host":  "MacBook-Air-de-Ana-7.local",
+  "executable":  "/Users/tete/TPS/projet_pytorch/venv/bin/python",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "121018208256",
+      "used":  "113635409920"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "writerId":  "fft6krhhg92d5a0wn6zfrb5zdstsp2z5"
+}
