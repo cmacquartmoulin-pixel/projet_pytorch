@@ -6,9 +6,9 @@ class CNN(nn.Module):
     def __init__(self, cfg: DictConfig):
         super().__init__()
 
-        conv_layers = []
-        in_channels = cfg.model.cnn.in_channels               # nombre de channels à l'entrée
-        for out in cfg.model.cnn.out_channels:  # parcourt la liste des tailles des différents canaux
+        conv_layers = []     # Initialisation d'une liste vide qui va accumuler les couches
+        in_channels = cfg.model.cnn.in_channels  # nombre de channels à l'entrée (1 pour grayscale, 3 pour RGB)
+        for out in cfg.model.cnn.out_channels:  # on itère sur la liste des canaux de sortie définie dans la config
           conv_layers.append(
           nn.Conv2d(
                   in_channels=in_channels,
