@@ -3,6 +3,6 @@
 # -------------------------------
 
 _name_: sgd
-lr: 0.001     # initial learning rate
+lr: 0.0001     # initial learning rate
 momentum: 0.9
-weight_decay: 0.0  # Weight decay 
+weight_decay: 0.0001  # Weight decay 
