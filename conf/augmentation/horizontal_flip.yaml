@@ -1,0 +1,6 @@
+# -------------------------------
+# conf/model/augmentation/random_crop.yaml
+# -------------------------------
+
+_target_: torchvision.transforms.RandomHorizontalFlip
+enabled: true
