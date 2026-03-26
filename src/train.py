@@ -38,6 +38,10 @@ def train(model, optimizer, loss, scheduler, train_loader, val_loader, device, c
     for epoch in range(cfg.epochs):
         train_loss, train_acc = _train_epoch(model, optimizer, loss, train_loader, device)
         val_loss, val_acc   = _val_epoch(model, loss, val_loader, device)
+        
+        if scheduler is not None:
+            scheduler.step()
+        
         print(f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
 
         wandb.log({
@@ -135,11 +139,11 @@ def main(cfg: DictConfig):
     # Hydra lit les fichiers `.yaml` et crée automatiquement la **loss**, l'**optimiseur** et le **scheduler**.
     loss = instantiate(cfg.loss)
     optimizer = instantiate(cfg.optimizer, params=model.parameters())
-    # scheduler = instantiate(cfg.scheduler, optimizer=optimizer)
+    scheduler = instantiate(cfg.scheduler, optimizer=optimizer)
 
     # Training
     train(model=model, optimizer=optimizer, loss=loss,
-        scheduler=None, train_loader=train_loader,
+        scheduler=scheduler, train_loader=train_loader,
         val_loader=val_loader, device=device, cfg=cfg)
     
     wandb.finish()

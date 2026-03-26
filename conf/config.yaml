@@ -10,19 +10,19 @@ defaults:
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
   - optimizer: adam
   - loss: cross_entropy
-  - augmentation: 
-    - horizontal_flip
-    - random_crop
+  - augmentation@augmentation.horizontal_flip: horizontal_flip
+  - augmentation@augmentation.random_crop: random_crop
+  - scheduler: step 
   - _self_
 
 seed: 42
-epochs: 30
+epochs: 20
 batch_size: 32
 
 early_stopping:
   enabled: true
-  patience: 5
-  min_delta: 0.001
+  patience: 10
+  min_delta: 0.0005
 
-debug: true
+debug: false
 debug_size: 1000

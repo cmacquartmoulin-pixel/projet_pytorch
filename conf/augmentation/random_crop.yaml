@@ -2,7 +2,7 @@
 # conf/model/augmentation/random_crop.yaml
 # -------------------------------
 
-_target_: torchvision.transforms.RandomCrop
+name: random_crop
 enabled: true
 size: 32
 padding: 4

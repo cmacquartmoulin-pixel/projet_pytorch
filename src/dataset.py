@@ -6,16 +6,38 @@ import numpy as np
 from torch.utils.data import Subset
 from omegaconf import DictConfig
 
+AUGMENTATION_REGISTRY = {
+    "horizontal_flip": lambda aug: transforms.RandomHorizontalFlip(),
+    "random_crop":     lambda aug: transforms.RandomCrop(aug.size, padding=aug.padding),
+}
+
 def get_dataloaders(cfg: DictConfig):
-    transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    ])
+    train_transforms_list = []
+
+    for name, aug in cfg.augmentation.items():
+        if not isinstance(aug, str) and not aug.get("enabled", True):
+            continue
+        if name in AUGMENTATION_REGISTRY:
+            train_transforms_list.append(AUGMENTATION_REGISTRY[name](aug))
+        else:
+            print(f"[WARNING] '{name}' not found in registry, ignored.")
+
+    normalize = transforms.Normalize(
+        mean=(0.4914, 0.4822, 0.4465),
+        std=(0.2470, 0.2435, 0.2616)
+    )
+    train_transforms_list.append(transforms.ToTensor())
+    train_transforms_list.append(normalize)
+    
+    # Val/test: só normaliza, sem augmentation
+    val_transform = transforms.Compose([transforms.ToTensor(), normalize])
+    train_transform = transforms.Compose(train_transforms_list)
+    
 
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
-                                            download=True, transform=transform)
+                                            download=True, transform=train_transform)
     testset = torchvision.datasets.CIFAR10(root='./data', train=False,
-                                            download=True, transform=transform)
+                                            download=True, transform=val_transform)
     
     if cfg.debug:
         trainset = Subset(trainset, range(cfg.debug_size))
@@ -27,7 +49,7 @@ def get_dataloaders(cfg: DictConfig):
                                             shuffle=False, num_workers=0)
 
     return trainloader, testloader
- 
+
 """""
 #TEST DU DEBUT 
 
