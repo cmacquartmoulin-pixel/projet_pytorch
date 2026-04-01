@@ -1,0 +1,25 @@
+2026-03-23 16:12:55,565 INFO    MainThread:10148 [wandb_setup.py:_flush():81] Current SDK version is 0.24.2
+2026-03-23 16:12:55,567 INFO    MainThread:10148 [wandb_setup.py:_flush():81] Configure stats pid to 10148
+2026-03-23 16:12:55,568 INFO    MainThread:10148 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-23 16:12:55,570 INFO    MainThread:10148 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\Clémence\Documents\Projet Python (porg II)\src\wandb\run-20260323_161255-57lviq5q\logs\debug.log
+2026-03-23 16:12:55,572 INFO    MainThread:10148 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\Clémence\Documents\Projet Python (porg II)\src\wandb\run-20260323_161255-57lviq5q\logs\debug-internal.log
+2026-03-23 16:12:55,573 INFO    MainThread:10148 [wandb_init.py:init():844] calling init triggers
+2026-03-23 16:12:55,574 INFO    MainThread:10148 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': {'mlp': {'name': 'classifier', 'mlp_dims': [4096, 512, 128, 10], 'dropout': 0.2}, 'cnn': {'name': 'simple', 'in_channels': 3, 'out_channels': [32, 64], 'kernel_size': 3, 'stride': 1, 'padding': 1, 'pool': 2}}, 'cnn_activation': {'name': 'relu', 'activation': {'_target_': 'torch.nn.ReLU', 'inplace': True}}, 'mlp_activation': {'name': 'relu', 'activation': {'_target_': 'torch.nn.ReLU', 'inplace': True}}, 'cnn_init': {'type': 'xavier', 'gain': 1.0}, 'mlp_init': {'type': 'xavier', 'gain': 1.0}, 'optimizer': {'_target_': 'torch.optim.Adam', 'lr': 0.001888, 'betas': [0.9, 0.999]}, 'loss': {'_target_': 'torch.nn.CrossEntropyLoss'}, 'augmentation': {}, 'seed': 42, 'epochs': 10, 'batch_size': 32, 'early_stopping': {'enabled': True, 'patience': 5, 'min_delta': 0.001}, 'debug': True, 'debug_size': 200, '_wandb': {}}
+2026-03-23 16:12:55,575 INFO    MainThread:10148 [wandb_init.py:init():892] starting backend
+2026-03-23 16:12:58,482 INFO    MainThread:10148 [wandb_init.py:init():895] sending inform_init request
+2026-03-23 16:12:58,498 INFO    MainThread:10148 [wandb_init.py:init():903] backend started and connected
+2026-03-23 16:12:58,502 INFO    MainThread:10148 [wandb_init.py:init():973] updated telemetry
+2026-03-23 16:12:58,626 INFO    MainThread:10148 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-23 16:12:59,575 INFO    MainThread:10148 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-23 16:12:59,827 INFO    MainThread:10148 [wandb_run.py:_console_start():2529] atexit reg
+2026-03-23 16:12:59,828 INFO    MainThread:10148 [wandb_run.py:_redirect():2377] redirect: wrap_raw
+2026-03-23 16:12:59,829 INFO    MainThread:10148 [wandb_run.py:_redirect():2446] Wrapping output streams.
+2026-03-23 16:12:59,830 INFO    MainThread:10148 [wandb_run.py:_redirect():2469] Redirects installed.
+2026-03-23 16:12:59,833 INFO    MainThread:10148 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-23 16:13:04,362 INFO    MainThread:10148 [wandb_watch.py:_watch():68] Watching
+2026-03-23 16:13:13,876 INFO    MainThread:10148 [wandb_run.py:_finish():2295] finishing run anateresafalcao-t-l-com-physique-strasbourg/cifar-project/57lviq5q
+2026-03-23 16:13:13,879 INFO    MainThread:10148 [wandb_run.py:_atexit_cleanup():2494] got exitcode: 0
+2026-03-23 16:13:13,882 INFO    MainThread:10148 [wandb_run.py:_restore():2476] restore
+2026-03-23 16:13:13,882 INFO    MainThread:10148 [wandb_run.py:_restore():2482] restore done
+2026-03-23 16:13:16,949 INFO    MainThread:10148 [wandb_run.py:_footer_sync_info():3871] logging synced files

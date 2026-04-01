@@ -1,0 +1,98 @@
+_wandb:
+    value:
+        cli_version: 0.24.2
+        m: []
+        python_version: 3.8.6
+        t:
+            "1":
+                - 1
+                - 41
+                - 50
+            "3":
+                - 13
+                - 16
+            "4": 3.8.6
+            "5": 0.24.2
+            "8":
+                - 3
+            "12": 0.24.2
+            "13": windows-amd64
+augmentation:
+    value:
+        horizontal_flip:
+            enabled: true
+            name: horizontal_flip
+        random_crop:
+            enabled: true
+            name: random_crop
+            padding: 4
+            size: 32
+batch_size:
+    value: 32
+cnn_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+cnn_init:
+    value:
+        gain: 1
+        type: xavier
+debug:
+    value: true
+debug_size:
+    value: 1000
+early_stopping:
+    value:
+        enabled: true
+        min_delta: 0.0005
+        patience: 10
+epochs:
+    value: 15
+loss:
+    value:
+        _target_: torch.nn.CrossEntropyLoss
+mlp_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+mlp_init:
+    value:
+        gain: 1
+        type: xavier
+model:
+    value:
+        cnn:
+            in_channels: 3
+            kernel_size: 3
+            name: simple
+            out_channels:
+                - 32
+                - 64
+            padding: 1
+            pool: 2
+            stride: 1
+        mlp:
+            dropout: 0.5
+            mlp_dims:
+                - 4096
+                - 512
+                - 128
+                - 10
+            name: classifier
+optimizer:
+    value:
+        _name_: sgd
+        lr: 0.0001
+        momentum: 0.9
+        weight_decay: 0.0001
+scheduler:
+    value:
+        _target_: torch.optim.lr_scheduler.StepLR
+        gamma: 0.1
+        step_size: 5
+seed:
+    value: 42

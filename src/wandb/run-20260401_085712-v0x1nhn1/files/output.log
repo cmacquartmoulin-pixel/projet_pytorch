@@ -1,0 +1,16 @@
+Files already downloaded and verified
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "train.py", line 132, in main
+    train_loader, val_loader = get_dataloaders(cfg)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\src\dataset.py", line 37, in get_dataloaders
+    trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torchvision\datasets\cifar.py", line 90, in __init__
+    self.data = np.vstack(self.data).reshape(-1, 3, 32, 32)
+  File "<__array_function__ internals>", line 200, in vstack
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\numpy\core\shape_base.py", line 296, in vstack
+    return _nx.concatenate(arrs, 0, dtype=dtype, casting=casting)
+  File "<__array_function__ internals>", line 200, in concatenate
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 146. MiB for an array with shape (50000, 3072) and data type uint8
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

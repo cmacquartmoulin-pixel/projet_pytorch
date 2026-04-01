@@ -1,0 +1,11 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "train.py", line 128, in main
+    train_loader, val_loader = get_dataloaders(cfg)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\src\dataset.py", line 15, in get_dataloaders
+    if cfg.augmentation.random_crop.enabled:
+omegaconf.errors.ConfigAttributeError: Key 'random_crop' is not in struct
+    full_key: augmentation.random_crop
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

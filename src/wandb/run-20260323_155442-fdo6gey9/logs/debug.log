@@ -1,0 +1,13 @@
+2026-03-23 15:54:42,795 INFO    MainThread:15128 [wandb_setup.py:_flush():81] Current SDK version is 0.24.2
+2026-03-23 15:54:42,795 INFO    MainThread:15128 [wandb_setup.py:_flush():81] Configure stats pid to 15128
+2026-03-23 15:54:42,795 INFO    MainThread:15128 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-23 15:54:42,795 INFO    MainThread:15128 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\Clémence\Documents\Projet Python (porg II)\src\wandb\run-20260323_155442-fdo6gey9\logs\debug.log
+2026-03-23 15:54:42,810 INFO    MainThread:15128 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\Clémence\Documents\Projet Python (porg II)\src\wandb\run-20260323_155442-fdo6gey9\logs\debug-internal.log
+2026-03-23 15:54:42,810 INFO    MainThread:15128 [wandb_init.py:init():844] calling init triggers
+2026-03-23 15:54:42,810 INFO    MainThread:15128 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': {'mlp': {'name': 'classifier', 'mlp_dims': [4096, 512, 128, 10], 'dropout': 0.2}, 'cnn': {'name': 'simple', 'in_channels': 3, 'out_channels': [32, 64], 'kernel_size': 3, 'stride': 1, 'padding': 1, 'pool': 2}}, 'cnn_activation': {'name': 'relu', 'activation': {'_target_': 'torch.nn.ReLU', 'inplace': True}}, 'mlp_activation': {'name': 'relu', 'activation': {'_target_': 'torch.nn.ReLU', 'inplace': True}}, 'cnn_init': {'type': 'xavier', 'gain': 1.0}, 'mlp_init': {'type': 'xavier', 'gain': 1.0}, 'optimizer': {'_target_': 'torch.optim.Adam', 'lr': 0.001888, 'betas': [0.9, 0.999]}, 'loss': {'_target_': 'torch.nn.CrossEntropyLoss'}, 'augmentation': {}, 'seed': 42, 'epochs': 10, 'batch_size': 32, 'early_stopping': {'enabled': True, 'patience': 5, 'min_delta': 0.001}, 'debug': True, 'debug_size': 200, '_wandb': {}}
+2026-03-23 15:54:42,810 INFO    MainThread:15128 [wandb_init.py:init():892] starting backend
+2026-03-23 15:54:45,856 INFO    MainThread:15128 [wandb_init.py:init():895] sending inform_init request
+2026-03-23 15:54:46,615 INFO    MainThread:15128 [wandb_init.py:init():903] backend started and connected
+2026-03-23 15:54:46,620 INFO    MainThread:15128 [wandb_init.py:init():973] updated telemetry
+2026-03-23 15:54:46,735 INFO    MainThread:15128 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout

@@ -1,0 +1,121 @@
+_wandb:
+    value:
+        cli_version: 0.24.2
+        e:
+            prv5ycq4c9def8vqr6bb546jpxq7emaf:
+                codePath: src\train.py
+                codePathLocal: train.py
+                cpu_count: 2
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "125739986944"
+                        used: "116497235968"
+                email: cmacquartmoulin@gmail.com
+                executable: C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\Scripts\python.exe
+                git:
+                    commit: 46dea0da9b0c62c972f3bfa13341a6b514bf6e53
+                    remote: https://github.com/cmacquartmoulin-pixel/projet_pytorch
+                host: DESKTOP-150MSDQ
+                memory:
+                    total: "4207968256"
+                os: Windows-10-10.0.19041-SP0
+                program: train.py
+                python: CPython 3.8.6
+                root: C:\Users\Clémence\Documents\Projet Python (porg II)\src
+                startedAt: "2026-03-26T09:03:19.986387Z"
+                writerId: prv5ycq4c9def8vqr6bb546jpxq7emaf
+        m: []
+        python_version: 3.8.6
+        t:
+            "1":
+                - 1
+                - 41
+                - 50
+            "2":
+                - 1
+                - 41
+                - 50
+            "3":
+                - 1
+                - 2
+                - 3
+                - 13
+                - 16
+            "4": 3.8.6
+            "5": 0.24.2
+            "8":
+                - 3
+            "12": 0.24.2
+            "13": windows-amd64
+augmentation:
+    value:
+        _target_: torchvision.transforms.RandomCrop
+        enabled: true
+        padding: 4
+        size: 32
+batch_size:
+    value: 32
+cnn_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+cnn_init:
+    value:
+        gain: 1
+        type: xavier
+debug:
+    value: true
+debug_size:
+    value: 1000
+early_stopping:
+    value:
+        enabled: true
+        min_delta: 0.001
+        patience: 5
+epochs:
+    value: 30
+loss:
+    value:
+        _target_: torch.nn.CrossEntropyLoss
+mlp_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+mlp_init:
+    value:
+        gain: 1
+        type: xavier
+model:
+    value:
+        cnn:
+            in_channels: 3
+            kernel_size: 3
+            name: simple
+            out_channels:
+                - 32
+                - 64
+            padding: 1
+            pool: 2
+            stride: 1
+        mlp:
+            dropout: 0.5
+            mlp_dims:
+                - 4096
+                - 512
+                - 128
+                - 10
+            name: classifier
+optimizer:
+    value:
+        _target_: torch.optim.Adam
+        betas:
+            - 0.9
+            - 0.999
+        lr: 0.001888
+seed:
+    value: 42

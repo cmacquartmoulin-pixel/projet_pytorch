@@ -1,0 +1,28 @@
+{
+  "os": "Windows-10-10.0.19041-SP0",
+  "python": "CPython 3.8.6",
+  "startedAt": "2026-04-01T07:24:25.944065Z",
+  "program": "train.py",
+  "codePath": "src\\train.py",
+  "codePathLocal": "train.py",
+  "git": {
+    "remote": "https://github.com/cmacquartmoulin-pixel/projet_pytorch",
+    "commit": "540df0b199f3d103f712812a2b4010066d72b837"
+  },
+  "email": "cmacquartmoulin@gmail.com",
+  "root": "C:\\Users\\Clémence\\Documents\\Projet Python (porg II)\\src",
+  "host": "DESKTOP-150MSDQ",
+  "executable": "C:\\Users\\Clémence\\Documents\\Projet Python (porg II)\\.venv\\Scripts\\python.exe",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "125739986944",
+      "used": "110284197888"
+    }
+  },
+  "memory": {
+    "total": "4207968256"
+  },
+  "writerId": "zm6zq98j0xbsa03sm755542tlc01ez3d"
+}

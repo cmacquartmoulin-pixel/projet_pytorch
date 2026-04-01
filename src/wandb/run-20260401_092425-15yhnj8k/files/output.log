@@ -1,0 +1,8 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Error executing job with overrides: []
+Error in call to target 'torch.optim.lr_scheduler.StepLR':
+TypeError('DictConfig is not an Optimizer')
+full_key: scheduler
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,53 @@
+model:
+  mlp:
+    name: classifier
+    mlp_dims:
+    - 4096
+    - 512
+    - 128
+    - 10
+    dropout: 0.2
+  cnn:
+    name: simple
+    in_channels: 3
+    out_channels:
+    - 32
+    - 64
+    kernel_size: 3
+    stride: 1
+    padding: 1
+    pool: 2
+cnn_activation:
+  name: relu
+  activation:
+    _target_: torch.nn.ReLU
+    inplace: true
+mlp_activation:
+  name: relu
+  activation:
+    _target_: torch.nn.ReLU
+    inplace: true
+cnn_init:
+  type: xavier
+  gain: 1.0
+mlp_init:
+  type: xavier
+  gain: 1.0
+optimizer:
+  _target_: torch.optim.Adam
+  lr: 0.001888
+  betas:
+  - 0.9
+  - 0.999
+loss:
+  _target_: torch.nn.CrossEntropyLoss
+augmentation: {}
+seed: 42
+epochs: 10
+batch_size: 32
+early_stopping:
+  enabled: true
+  patience: 5
+  min_delta: 0.001
+debug: true
+debug_size: 1000

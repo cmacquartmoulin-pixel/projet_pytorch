@@ -1,0 +1,54 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "train.py", line 153, in <module>
+    main()
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\main.py", line 94, in decorated_main
+    _run_hydra(
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\_internal\utils.py", line 394, in _run_hydra
+    _run_app(
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\_internal\utils.py", line 457, in _run_app
+    run_and_report(
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\_internal\utils.py", line 220, in run_and_report
+    return func()
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\_internal\utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\_internal\hydra.py", line 119, in run
+    ret = run_job(
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\hydra\core\utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "train.py", line 145, in main
+    train(model=model, optimizer=optimizer, loss=loss,
+  File "train.py", line 39, in train
+    train_loss, train_acc = _train_epoch(model, optimizer, loss, train_loader, device)
+  File "train.py", line 79, in _train_epoch
+    outputs = model(x)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\src\models\net.py", line 30, in forward
+    x = self.cnn(x)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\src\models\cnn.py", line 26, in forward
+    return self.cnn(x)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\container.py", line 219, in forward
+    input = module(input)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\modules\pooling.py", line 164, in forward
+    return F.max_pool2d(input, self.kernel_size, self.stride,
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\_jit_internal.py", line 503, in fn
+    return if_false(*args, **kwargs)
+  File "C:\Users\Clémence\Documents\Projet Python (porg II)\.venv\lib\site-packages\torch\nn\functional.py", line 796, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+KeyboardInterrupt

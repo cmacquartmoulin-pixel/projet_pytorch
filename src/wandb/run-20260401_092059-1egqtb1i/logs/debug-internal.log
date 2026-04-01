@@ -1,0 +1,17 @@
+{"time":"2026-04-01T09:21:02.2811181+02:00","level":"INFO","msg":"stream: starting","core version":"0.24.2"}
+{"time":"2026-04-01T09:21:03.0392812+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:21:05.136318+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:21:09.6356349+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:21:18.0098934+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:21:37.1327243+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:22:11.0670948+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2026-04-01T09:23:13.0902545+02:00","level":"INFO","msg":"stream: created new stream","id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:13.1142192+02:00","level":"INFO","msg":"handler: started","stream_id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:13.1484006+02:00","level":"INFO","msg":"stream: started","id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:13.1489094+02:00","level":"INFO","msg":"writer: started","stream_id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:13.1490586+02:00","level":"INFO","msg":"sender: started","stream_id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:13.1744109+02:00","level":"INFO","msg":"stream: closing","id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:15.262143+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-01T09:23:15.2626575+02:00","level":"INFO","msg":"handler: closed","stream_id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:15.2626575+02:00","level":"INFO","msg":"sender: closed","stream_id":"1egqtb1i"}
+{"time":"2026-04-01T09:23:15.2626575+02:00","level":"INFO","msg":"stream: closed","id":"1egqtb1i"}
