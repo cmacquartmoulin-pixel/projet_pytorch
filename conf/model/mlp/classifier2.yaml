@@ -1,7 +1,0 @@
-# -------------------------------
-# conf/model/mlp/classifier2.yaml
-# -------------------------------
-name : classifier2 #appele classifier avant
-  
-mlp_dims: [1024, 128, 96, 64, 10]
-dropout: 0.3 
