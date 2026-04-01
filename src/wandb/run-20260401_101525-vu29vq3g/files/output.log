@@ -1,0 +1,16 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 0 | Train Loss: 2.4551 | Val Loss: 2.2114
+Epoch 1 | Train Loss: 2.3261 | Val Loss: 2.1873
+Epoch 2 | Train Loss: 2.2230 | Val Loss: 2.1480
+Epoch 3 | Train Loss: 2.1912 | Val Loss: 2.0672
+Epoch 4 | Train Loss: 2.1624 | Val Loss: 1.9977
+Epoch 5 | Train Loss: 2.1405 | Val Loss: 1.9965
+Epoch 6 | Train Loss: 2.1318 | Val Loss: 1.9978
+Epoch 7 | Train Loss: 2.1358 | Val Loss: 1.9994
+Epoch 8 | Train Loss: 2.0910 | Val Loss: 1.9975
+Epoch 9 | Train Loss: 2.0884 | Val Loss: 1.9939
+Epoch 10 | Train Loss: 2.0737 | Val Loss: 1.9932
+Epoch 11 | Train Loss: 2.1134 | Val Loss: 1.9928
+[34m[1mwandb[0m: [33mWARNING[0m Linked 1 file into the W&B run directory (hardlinks); call wandb.save again to sync new files.
+Modele sauvegardé dans model.pth
