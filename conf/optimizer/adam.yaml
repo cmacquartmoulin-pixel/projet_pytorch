@@ -3,8 +3,9 @@
 # -------------------------------
 
 _target_: torch.optim.Adam 
-lr: 0.001888  # initial learning rate
+lr: 0.0003 # initial learning rate
 betas: [0.9, 0.999] # Coefficients used for computing running averages of gradient and its square
+weight_decay: 0.0001 #avoid overfitting
 
 #0.9 -> how much the optimizer relies on the past gradients (momentum)
 #0.999 -> how much the optimizer relies on the past squared gradients (RMSProp)

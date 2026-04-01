@@ -16,7 +16,7 @@ defaults:
   - _self_
 
 seed: 42
-epochs: 20
+epochs: 15
 batch_size: 32
 
 early_stopping:
