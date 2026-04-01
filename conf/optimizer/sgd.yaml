@@ -3,7 +3,6 @@
 # -------------------------------
 
 _target_: torch.optim.SGD
-_name_: sgd
 lr: 0.0001     # initial learning rate
 momentum: 0.9
 weight_decay: 0.0001  # Weight decay 

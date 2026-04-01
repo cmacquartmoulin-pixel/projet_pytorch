@@ -8,7 +8,7 @@ defaults:
   - activation@mlp_activation : relu    # activation par défaut du MLP
   - init@cnn_init             : xavier  # initialisation par défaut du CNN
   - init@mlp_init             : xavier  # initialisation par défaut du MLP  
-  - optimizer: sgd
+  - optimizer: adam
   - loss: cross_entropy
   - augmentation@augmentation.horizontal_flip: horizontal_flip
   - augmentation@augmentation.random_crop: random_crop
@@ -16,7 +16,7 @@ defaults:
   - _self_
 
 seed: 42
-epochs: 15
+epochs: 12
 batch_size: 32
 
 early_stopping:
@@ -25,4 +25,4 @@ early_stopping:
   min_delta: 0.0005
 
 debug: true
-debug_size: 1000
+debug_size: 500
