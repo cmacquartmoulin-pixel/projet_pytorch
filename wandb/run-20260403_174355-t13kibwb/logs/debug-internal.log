@@ -1,0 +1,18 @@
+{"time":"2026-04-03T17:43:55.21396+02:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-03T17:43:55.217164+02:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-04-03T17:43:55.27182+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-04-03T17:43:55.442938+02:00","level":"INFO","msg":"stream: created new stream","id":"t13kibwb"}
+{"time":"2026-04-03T17:43:55.443198+02:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-03T17:43:55.443897+02:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-03T17:43:55.44392+02:00","level":"INFO","msg":"writer: started","stream_id":"t13kibwb"}
+{"time":"2026-04-03T17:43:55.443973+02:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-03T17:43:58.590278+02:00","level":"INFO","msg":"filestream: sending request","total_files":1}
+{"time":"2026-04-03T17:43:58.906013+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-03T17:44:12.305583+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-03T17:44:12.306204+02:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":6,"events_offset":0,"events_lines":1,"uploaded_len":4,"complete":true,"exit_code":0}
+{"time":"2026-04-03T17:44:12.706786+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-03T17:44:12.708926+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-04-03T17:44:12.719533+02:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-03T17:44:12.719606+02:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-03T17:44:12.720148+02:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-03T17:44:12.720191+02:00","level":"INFO","msg":"stream: closed"}

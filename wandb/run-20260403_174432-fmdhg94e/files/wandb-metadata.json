@@ -1,0 +1,28 @@
+{
+  "os":  "macOS-14.8.4-x86_64-i386-64bit",
+  "python":  "CPython 3.12.7",
+  "startedAt":  "2026-04-03T15:44:32.264402Z",
+  "program":  "/Users/tete/TPS/projet_pytorch/src/optuna_search.py",
+  "codePath":  "src/optuna_search.py",
+  "codePathLocal":  "src/optuna_search.py",
+  "git":  {
+    "remote":  "https://github.com/cmacquartmoulin-pixel/projet_pytorch.git",
+    "commit":  "254010a252ccbebfeea3adeb9374c38085c103cd"
+  },
+  "email":  "tetefalcao.18@gmail.com",
+  "root":  "/Users/tete/TPS/projet_pytorch",
+  "host":  "MacBook-Air-de-Ana-7.local",
+  "executable":  "/Users/tete/TPS/projet_pytorch/venv/bin/python",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "121018208256",
+      "used":  "113848860672"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "writerId":  "g56vuagatjqrs0aixplz82gunkcruw11"
+}

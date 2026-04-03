@@ -1,0 +1,16 @@
+[WARNING] 'name' não encontrada no registry, ignorada.
+[WARNING] 'enabled' não encontrada no registry, ignorada.
+[WARNING] 'size' não encontrada no registry, ignorada.
+[WARNING] 'padding' não encontrada no registry, ignorada.
+Files already downloaded and verified
+Files already downloaded and verified
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 142, in main
+    scheduler = instantiate(cfg.scheduler, optimizer=optimizer)
+                            ^^^^^^^^^^^^^
+omegaconf.errors.ConfigAttributeError: Key 'scheduler' is not in struct
+    full_key: scheduler
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

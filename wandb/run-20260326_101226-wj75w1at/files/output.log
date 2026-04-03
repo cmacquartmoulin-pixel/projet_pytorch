@@ -1,0 +1,11 @@
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/Users/tete/TPS/projet_pytorch/src/train.py", line 132, in main
+    train_loader, val_loader = get_dataloaders(cfg)
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tete/TPS/projet_pytorch/src/dataset.py", line 14, in get_dataloaders
+    if aug.get("name") == "random_crop" and aug.get("enabled", True):
+       ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

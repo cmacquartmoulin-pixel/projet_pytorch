@@ -1,0 +1,131 @@
+_wandb:
+    value:
+        cli_version: 0.25.1
+        e:
+            kzamfwj8gs1mk2qc424u1gpdizysn619:
+                codePath: src/optuna_search.py
+                codePathLocal: src/optuna_search.py
+                cpu_count: 2
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "121018208256"
+                        used: "114928316416"
+                email: tetefalcao.18@gmail.com
+                executable: /Users/tete/TPS/projet_pytorch/venv/bin/python
+                git:
+                    commit: 254010a252ccbebfeea3adeb9374c38085c103cd
+                    remote: https://github.com/cmacquartmoulin-pixel/projet_pytorch.git
+                host: MacBook-Air-de-Ana-7.local
+                memory:
+                    total: "8589934592"
+                os: macOS-14.8.4-x86_64-i386-64bit
+                program: /Users/tete/TPS/projet_pytorch/src/optuna_search.py
+                python: CPython 3.12.7
+                root: /Users/tete/TPS/projet_pytorch
+                startedAt: "2026-04-03T15:46:40.502632Z"
+                writerId: kzamfwj8gs1mk2qc424u1gpdizysn619
+        m: []
+        python_version: 3.12.7
+        t:
+            "1":
+                - 1
+                - 35
+                - 41
+                - 50
+            "2":
+                - 1
+                - 35
+                - 41
+                - 50
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.12.7
+            "5": 0.25.1
+            "10":
+                - 20
+            "12": 0.25.1
+            "13": darwin-x86_64
+augmentation:
+    value:
+        horizontal_flip:
+            enabled: true
+            name: horizontal_flip
+        random_crop:
+            enabled: true
+            name: random_crop
+            padding: 4
+            size: 32
+batch_size:
+    value: 128
+cnn_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+cnn_init:
+    value:
+        gain: 1
+        type: xavier
+debug:
+    value: true
+debug_size:
+    value: 500
+early_stopping:
+    value:
+        enabled: true
+        min_delta: 0.0005
+        patience: 10
+epochs:
+    value: 12
+loss:
+    value:
+        _target_: torch.nn.CrossEntropyLoss
+mlp_activation:
+    value:
+        activation:
+            _target_: torch.nn.ReLU
+            inplace: true
+        name: relu
+mlp_init:
+    value:
+        gain: 1
+        type: xavier
+model:
+    value:
+        cnn:
+            in_channels: 3
+            kernel_size: 3
+            name: simple
+            out_channels:
+                - 32
+                - 64
+            padding: 1
+            pool: 2
+            stride: 1
+        mlp:
+            dropout: 0.23472920571648492
+            mlp_dims:
+                - 4096
+                - 512
+                - 128
+                - 10
+            name: classifier
+optimizer:
+    value:
+        _target_: torch.optim.Adam
+        betas:
+            - 0.9
+            - 0.999
+        lr: 0.00039139971255702663
+        weight_decay: 0.0001
+scheduler:
+    value:
+        _target_: torch.optim.lr_scheduler.StepLR
+        gamma: 0.4890196859910177
+        step_size: 6
+seed:
+    value: 42

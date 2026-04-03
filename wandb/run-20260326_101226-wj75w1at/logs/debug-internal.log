@@ -1,0 +1,17 @@
+{"time":"2026-03-26T10:12:27.383557+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-03-26T10:12:27.396496+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-03-26T10:12:27.419077+01:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-03-26T10:12:27.720642+01:00","level":"INFO","msg":"stream: created new stream","id":"wj75w1at"}
+{"time":"2026-03-26T10:12:27.721718+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-03-26T10:12:27.721899+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-03-26T10:12:27.722754+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-03-26T10:12:27.722754+01:00","level":"INFO","msg":"writer: started","stream_id":"wj75w1at"}
+{"time":"2026-03-26T10:12:28.708235+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-03-26T10:12:28.717625+01:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-03-26T10:12:29.766084+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-26T10:12:33.056538+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-26T10:12:33.056995+01:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":0,"console_lines":11,"uploaded_len":5,"complete":true,"exit_code":1}
+{"time":"2026-03-26T10:12:33.474549+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-03-26T10:12:33.474956+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-03-26T10:12:33.475347+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-03-26T10:12:33.475442+01:00","level":"INFO","msg":"stream: closed"}

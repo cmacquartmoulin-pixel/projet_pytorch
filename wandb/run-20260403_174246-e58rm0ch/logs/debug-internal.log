@@ -1,0 +1,20 @@
+{"time":"2026-04-03T17:42:46.507724+02:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-04-03T17:42:46.508743+02:00","level":"INFO","msg":"stream: starting","core version":"0.25.1"}
+{"time":"2026-04-03T17:42:46.528829+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU resource: monitor: could not start GPU binary: fork/exec /Users/tete/TPS/projet_pytorch/venv/lib/python3.12/site-packages/wandb/bin/gpu_stats: bad CPU type in executable"}
+{"time":"2026-04-03T17:42:46.877375+02:00","level":"INFO","msg":"stream: created new stream","id":"e58rm0ch"}
+{"time":"2026-04-03T17:42:46.877556+02:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-04-03T17:42:46.878274+02:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-04-03T17:42:46.878311+02:00","level":"INFO","msg":"writer: started","stream_id":"e58rm0ch"}
+{"time":"2026-04-03T17:42:46.878369+02:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-04-03T17:42:49.384229+02:00","level":"INFO","msg":"filestream: sending request","total_files":1}
+{"time":"2026-04-03T17:42:49.701547+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-03T17:43:04.387664+02:00","level":"INFO","msg":"filestream: sending request","total_files":3,"history_offset":0,"history_lines":7,"events_offset":0,"events_lines":1,"uploaded_len":3}
+{"time":"2026-04-03T17:43:04.455242+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-04-03T17:43:04.611102+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-03T17:43:04.611338+02:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":1,"complete":true,"exit_code":0}
+{"time":"2026-04-03T17:43:04.83864+02:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-04-03T17:43:04.842636+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-04-03T17:43:04.868002+02:00","level":"INFO","msg":"stream: closing"}
+{"time":"2026-04-03T17:43:04.868042+02:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-04-03T17:43:04.868298+02:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-04-03T17:43:04.868338+02:00","level":"INFO","msg":"stream: closed"}
