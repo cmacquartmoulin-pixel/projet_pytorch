@@ -1,2 +1,5 @@
+# -------------------------------
+# conf/model/init/kaiming.yaml
+# -------------------------------
 type: kaiming
 mode: fan_out
