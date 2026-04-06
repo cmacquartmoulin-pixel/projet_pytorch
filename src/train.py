@@ -136,7 +136,7 @@ def main(cfg: DictConfig):
     # summary(model, input_size=(1, 3, 32, 32))  # Show informations about the network
     wandb.watch(model, log="gradients", log_freq=10)
 
-    # Hydra lit les fichiers `.yaml` et crée automatiquement la **loss**, l'**optimiseur** et le **scheduler**.
+    # Hydra lit les fichiers .yaml et crée automatiquement la loss, l'optimiseur et le scheduler.
     loss = instantiate(cfg.loss)
     optimizer = instantiate(cfg.optimizer, params=model.parameters())
     scheduler = instantiate(cfg.scheduler, optimizer=optimizer)
