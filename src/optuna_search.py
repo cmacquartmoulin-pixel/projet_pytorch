@@ -145,5 +145,5 @@ if __name__ == "__main__":
         print(f"    {k}: {v}")
 
 
-    # Tip: visualize all trials with:
+    # visualize all trials with:
     # optuna-dashboard sqlite:///optuna_cifar10.db
