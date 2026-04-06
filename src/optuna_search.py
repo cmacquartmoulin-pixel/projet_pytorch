@@ -10,10 +10,14 @@ from models import Net
 from dataset import get_dataloaders
 
 
-# build a config from optuna suggestions (overrides the yaml)
+#takes base_cfg (from config.yaml through hydra)
+#creates a copy in memory as python dictionary
+#overrides specific values in this copy based off optuna's suggestions
+#returns new DictConfig object with modified values 
 def build_cfg(trial: optuna.Trial, base_cfg: DictConfig) -> DictConfig:
     cfg_dict = OmegaConf.to_container(base_cfg, resolve=True)
 
+    #these are the hyperparameters that will be optimized with optuna
     # optimizer: lr 
     cfg_dict["optimizer"]["lr"] = trial.suggest_float("lr", 1e-4, 1e-2, log=True)
 
@@ -24,28 +28,19 @@ def build_cfg(trial: optuna.Trial, base_cfg: DictConfig) -> DictConfig:
     # batch_size 
     cfg_dict["batch_size"] = trial.suggest_categorical("batch_size", [32, 64, 128])
 
-    # MLP architecture 
-    # We fix input (4096) and output (10) and let Optuna choose hidden layers
-    hidden1  = trial.suggest_categorical("hidden1",  [256, 512, 1024])
-    hidden2  = trial.suggest_categorical("hidden2",  [64, 128, 256])
-    dropout  = trial.suggest_float("dropout", 0.1, 0.5)
-    cfg_dict["model"]["mlp"]["mlp_dims"] = [4096, hidden1, hidden2, 10]
-    cfg_dict["model"]["mlp"]["dropout"]  = dropout
-
     return OmegaConf.create(cfg_dict)
 
 
-# One Optuna trial = one full training run
+# one Optuna trial = one full training run
 def objective(trial: optuna.Trial, base_cfg: DictConfig) -> float:
     cfg = build_cfg(trial, base_cfg)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     torch.manual_seed(base_cfg.seed)
 
-    # Data (uses the new batch_size from cfg)
+    # uses the new batch_size from cfg
     train_loader, val_loader = get_dataloaders(cfg)
 
-    # Model
     model = Net(cfg).to(device)
     loss_fn = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=cfg.optimizer.lr)
@@ -66,7 +61,6 @@ def objective(trial: optuna.Trial, base_cfg: DictConfig) -> float:
     best_val_loss = float("inf")
 
     for epoch in range(cfg.epochs):
-        #  train 
         model.train()
         for x, y in train_loader:
             x, y = x.to(device), y.to(device)
@@ -78,7 +72,6 @@ def objective(trial: optuna.Trial, base_cfg: DictConfig) -> float:
 
         scheduler.step()
 
-        #  validation 
         model.eval()
         val_loss = 0.0
         correct  = 0
@@ -97,7 +90,7 @@ def objective(trial: optuna.Trial, base_cfg: DictConfig) -> float:
 
         wandb.log({"epoch": epoch + 1, "val_loss": val_loss, "val_acc": val_acc})
 
-        # Optuna pruning: stop unpromising trials early
+        # optuna pruning (stop unpromising trials early)
         trial.report(val_loss, epoch)
         if trial.should_prune():
             wandb.finish()
@@ -111,16 +104,16 @@ def objective(trial: optuna.Trial, base_cfg: DictConfig) -> float:
 
 
 
-# Main: load base config, run the study
+#load base config, run the study
 if __name__ == "__main__":
     import hydra
     from omegaconf import DictConfig
 
-    # Load the same config.yaml used in main.py (without @hydra.main decorator)
+    #load config manually (without @hydra.main)
     with hydra.initialize(config_path="../conf", version_base=None):
         base_cfg = hydra.compose(config_name="config")
 
-    # Pruner: cuts trials that are clearly worse than others early
+    #cuts trials that are worse than others early
     pruner  = optuna.pruners.MedianPruner(n_startup_trials=3, n_warmup_steps=5)
     study   = optuna.create_study(
         direction    = "minimize",   # we want to minimize val_loss
@@ -136,8 +129,8 @@ if __name__ == "__main__":
         timeout   = 3600,   # max 1 hour (optional safety limit)
     )
 
-    # Results
-    print("\n========== BEST TRIAL ==========")
+    #results
+    print("\n Best trial: ")
     best = study.best_trial
     print(f"  Val loss : {best.value:.4f}")
     print("  Params   :")
@@ -145,5 +138,3 @@ if __name__ == "__main__":
         print(f"    {k}: {v}")
 
 
-    # visualize all trials with:
-    # optuna-dashboard sqlite:///optuna_cifar10.db
